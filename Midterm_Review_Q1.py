@@ -16,3 +16,10 @@
 # Note: You are required to use the two functions that your colleague has written to perform the tasks of getting
 # user inputs and calculating the total. Do not define these functions again.
 # Without comments, your program should be no longer than 7-8 lines
+
+num_students=2
+total=0
+for i in range(num_students):
+    name=input("Enter your name \n")
+    total+=Get_score(name)
+average=Get_average(total,num_students)

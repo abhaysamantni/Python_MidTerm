@@ -11,3 +11,36 @@
 # X-axis are numbers from 1 to 366.
 
 # note: The data is from a year that was not a leap year, so February has 28 days.
+
+#Solution for 1
+from datetime import date, datetime
+day_of_the_year = date(2019, 3, 1).timetuple().tm_yday
+print(day_of_the_year)
+steps_file=open("steps.txt",'r')
+count=0
+while(count!=day_of_the_year):
+    num_steps=steps_file.readline()
+    count+=1
+print(num_steps)
+steps_file.close()
+
+#Solution for 2
+from datetime import date, datetime
+steps_file=open("steps.txt",'r')
+count=0
+for i in range(1,12):
+    if ((i == 1) or (i == 3) or (i == 5) or (i == 7) or (i == 8) or (i == 10) or (i ==12)):
+        n = 31
+    elif (i == 2):
+        n = 28
+    elif ((i == 4) or (i == 6) or (i ==9) or (i == 11)):
+        n == 30
+    count=0
+    total=0
+    while(count<n):
+        num_steps=int(steps_file.readline())
+        total+=num_steps
+        count+=1
+#    print("Sum for month", i, 'is', total)
+    print("Average for month", i, 'is', total/n)
+steps_file.close()
