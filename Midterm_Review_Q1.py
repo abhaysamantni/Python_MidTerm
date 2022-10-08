@@ -17,7 +17,7 @@
 # user inputs and calculating the total. Do not define these functions again.
 # Without comments, your program should be no longer than 7-8 lines
 
-num_students=2
+num_students=100
 total=0
 for i in range(num_students):
     name=input("Enter your name \n")
