@@ -17,3 +17,8 @@ total_time = time.perf_counter_ns() - start_time
 print(f"Row count is {row_count}")
 print(total_time / 1e9)
 file.close()
+
+import psutil
+
+# Getting % usage of virtual_memory ( 3rd field)
+print('Total RAM memory used:', psutil.virtual_memory()[3])
