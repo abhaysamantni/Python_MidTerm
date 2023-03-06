@@ -1,3 +1,5 @@
+#Practice for map reduce. Solution for how to calculate average of large files using map reduce technique
+
 from mrjob.job import MRJob
 import mrjob
 import pdb
