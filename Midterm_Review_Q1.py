@@ -1,6 +1,6 @@
 # One of your colleagues has written the following functions.
 # Get_Score(user_name)
-# which returns a test score for the user student_name.
+# which returns a test score for the user user_name.
 # and
 #
 # Get_average(total, number_of_students)
@@ -16,10 +16,10 @@
 # Note: You are required to use the two functions that your colleague has written to perform the tasks of getting
 # user inputs and calculating the total. Do not define these functions again.
 # Without comments, your program should be no longer than 7-8 lines
-
+import scores
 num_students=100
 total=0
 for i in range(num_students):
     name=input("Enter your name \n")
-    total+=Get_score(name)
-average=Get_average(total,num_students)
+    total+=scores.Get_score(name)
+average=scores.Get_average(total,num_students)
